@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import img from "../../assets/img.jpeg"
 
@@ -9,6 +9,8 @@ const Login = () => {
   const [signInError, setError] = useState("")
 
     const { register, handleSubmit,reset, watch, formState: { errors } } = useForm();
+
+    const navigate = useNavigate()
 
     
 
@@ -21,7 +23,7 @@ const Login = () => {
     }
       else{
         setError(" ")
-      fetch('http://localhost:5000/user', {
+      fetch('https://hack-app-server.vercel.app/user', {
             method : "POST", 
             headers : {
               'content-type' : 'application/json'
@@ -33,6 +35,7 @@ const Login = () => {
             toast.success('Successfully Logged In')
             console.log(data)
             reset();
+            navigate("/home")
           } )
     }
 
