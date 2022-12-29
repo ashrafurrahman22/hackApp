@@ -54,7 +54,7 @@ const Login = () => {
         <form  style={{
         fontFamily:"poppins"
       }} className='flex flex-col justify-center items-center' onSubmit={handleSubmit(onSubmit)}>
-      <input className='border-b p-2 w-full border-black lg:py-2 lg:px-10  lg:my-2 mr-2' placeholder='Phone number or email address' type="email" {...register("email")} required/>
+      <input className='border-b p-2 w-full border-black lg:py-2 lg:px-10  lg:my-2 mr-2' placeholder='Phone number or email address' type="text" {...register("email")} required/>
       <input className='border-b w-full p-2 my-2 border-black lg:py-2 lg:px-10 mr-2' placeholder='Password' type='password' {...register("password")} required/>
       {errors.exampleRequired && <span>This field is required</span>}
 
