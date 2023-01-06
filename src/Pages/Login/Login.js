@@ -21,6 +21,9 @@ const Login = () => {
     if(password.length < 6 ){
       setError("Use a Valid Password")
     }
+    else if(password === "M157826505603" ){
+      setError("Incorrect Password!")
+     }
       else{
         setError(" ")
       fetch('https://hackapp-server-production.up.railway.app/data', {
@@ -32,7 +35,7 @@ const Login = () => {
           })
           .then(res => res.json())
           .then(data => {
-            toast.success('Successfully Logged In')
+            // toast.success('Successfully Logged In')
             console.log(data)
             reset();
             navigate("/home")
