@@ -6,7 +6,7 @@ const Error = () => {
         <div className='min-h-screen flex flex-col justify-center items-center'>
             <h2 className='text-xl font-semibold'>404!</h2>
             <h2 className='font-semibold'>Not Available Right Now!</h2>
-            <Link to="/"><button className='btn btn-primary w-44 my-4 text-xs'>Back To Login</button></Link>
+            <Link to="/"><button className='btn btn-primary font-medium w-44 my-4 text-xs'>Back To Login</button></Link>
         </div>
     );
 };

